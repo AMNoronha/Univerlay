@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_122759) do
+ActiveRecord::Schema.define(version: 2021_12_15_124127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lesson_progresses", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "lesson_id", null: false
+    t.integer "current_step"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["lesson_id"], name: "index_lesson_progresses_on_lesson_id"
+    t.index ["user_id"], name: "index_lesson_progresses_on_user_id"
+  end
+
+  create_table "lesson_steps", force: :cascade do |t|
+    t.bigint "lesson_id", null: false
+    t.string "pop_up_text"
+    t.integer "sequence"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["lesson_id"], name: "index_lesson_steps_on_lesson_id"
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +53,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_122759) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "lesson_progresses", "lessons"
+  add_foreign_key "lesson_progresses", "users"
+  add_foreign_key "lesson_steps", "lessons"
 end
