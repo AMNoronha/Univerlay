@@ -1,2 +1,34 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.btn-primary {
+  background-color:$semi-dark-green !important;
+  border-color:$semi-dark-green !important;
+  color: white;
+
+  &:hover {
+    background-color: #308657 !important;
+    border-color: #308657 !important;
+  }
+}
+
+#header-request {
+  background-color: $semi-dark-green;
+  color: white;
+}
+
+#carouselExampleIndicators {
+  border:5px solid $lighter-green;
+}
+
+#map {
+  border:5px solid $lighter-green;
+}
+
+#dropdown-color {
+  background-color: $semi-dark-green;
+}
+
+#dropdown-font {
+  color: white;
+}
