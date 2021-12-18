@@ -1,16 +1,12 @@
 <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
 
-    <a class="navbar-brand" id="brand" href="/">
-      <span><%= image_tag "recycleme-logo.svg", class: "d-inline-block align-center", alt: "" %>
-       UNIVERLAY
-      </span>
-    </a>
+    <%= link_to image_tag("UNIVERLAY.png", alt: "logo"), '/', class: 'navbar-brand' %>
 
     <%= form_tag root_path, method: :get, remote: true do %>
       <%= text_field_tag :query,
       params[:query],
       class: "form-line form-control-lg align-items-center",
-      placeholder: "Find an item" %>
+      placeholder: "Find a lesson" %>
       <%= submit_tag "Search", class: "btn btn-outline-light" %>
     <% end %>
 
