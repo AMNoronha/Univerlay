@@ -2,33 +2,33 @@
 @import "home";
 
 .btn-primary {
-  background-color:$semi-dark-green !important;
-  border-color:$semi-dark-green !important;
+  background-color:$dark-purple !important;
+  border-color:$dark-purple !important;
   color: white;
 
   &:hover {
-    background-color: #308657 !important;
-    border-color: #308657 !important;
+    background-color: $lighter-purple !important;
+    border-color: $lighter-purple !important;
   }
 }
 
-#header-request {
-  background-color: $semi-dark-green;
-  color: white;
-}
+// #header-request {
+//   background-color: $semi-dark-green;
+//   color: white;
+// }
 
-#carouselExampleIndicators {
-  border:5px solid $lighter-green;
-}
+// #carouselExampleIndicators {
+//   border:5px solid $lighter-green;
+// }
 
-#map {
-  border:5px solid $lighter-green;
-}
+// #map {
+//   border:5px solid $lighter-green;
+// }
 
-#dropdown-color {
-  background-color: $semi-dark-green;
-}
+// #dropdown-color {
+//   background-color: $semi-dark-green;
+// }
 
-#dropdown-font {
-  color: white;
-}
+// #dropdown-font {
+//   color: white;
+// }
