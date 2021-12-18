@@ -7,7 +7,7 @@
       params[:query],
       class: "form-line form-control-lg align-items-center",
       placeholder: "Find a lesson" %>
-      <%= submit_tag "Search", class: "btn btn-outline-light" %>
+      <%= submit_tag "Search", class: "btn btn-outline-light ml-2" %>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,8 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link text-light" %>
+          <%= link_to "Login", new_user_session_path, class: "btn btn-outline-light" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary ml-2" %>
         </li>
       <% end %>
     </ul>
