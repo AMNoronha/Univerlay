@@ -13,14 +13,5 @@ class PagesController < ApplicationController
     @lessons_filtered = @lessons.reject do |lesson|
       @lesson_progresses.include?(lesson.id)
     end
-
-
-    if current_user.present?
-      session[:count] = LessonProgress.joins(:lesson).where("(lessons.user_id = #{current_user.id}
-    OR lesson_progresses.user_id = #{current_user.id}) AND lesson_progresses.requested = true
-    AND lesson_progresses.approved = false").count
-    else
-      @count = ""
-    end
   end
 end
