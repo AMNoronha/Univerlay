@@ -28,6 +28,20 @@
 
 <div class="container-fluid">
   <br>
-  <h2 class="py-3 text-center">All our available training (<%= %>)</h2>
+  <h2 class="py-3 text-center">All our available training (<%=@lessons_filtered.length %>)</h2>
+      <br>
+        <div class="row">
+          <% @lessons_filtered.reverse_each do |lesson| %>
+                 <div class="card-body">
+                  <h5 class="card-title"><%= lesson.title %></h5>
+                 </div>
+                <div class="card-footer d-flex justify-content-between p-3">
+                  <%= link_to 'More info', lesson_path(lesson), class: "text-light text-decoration-none" %>
+                  <h6 class="text-light m-0">Posted on: <%= lesson.created_at.to_s.split(' ').first %></h6>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
   <div>
 </div>
