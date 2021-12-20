@@ -1,28 +1,33 @@
-<div class="banner">
-  <div class="container">
-    <div class="text-center">
-      <h1 class="mb-4">3 Easy Steps<br>
+<%= content_for(:navbar_class, "navbar-home") %>
+
+<div class="banner d-flex align-items-center">
+  <div class="container-fluid text-center">
+    <div class="banner-header mt-5 mb-4">
+      <h1>3 Easy Steps<br>
       To learning new software</h1>
     </div>
+
     <div class="banner-cards d-flex justify-content-around">
-      <div class="card">
+      <div class="banner-card">
           <%= image_tag "wireframe.svg", class: "mt-3 mb-3" %>
           <h4>Find Training</h4>
           <p>for popular yet difficult tasks online</p>
       </div>
 
-      <div class="card">
+      <div class="banner-card">
         <%= image_tag "download-file.svg", class: "mt-3 mb-3" %>
         <h4>Download our extension</h4>
         <p>and enter a world of on-site displayed training</p>
       </div>
 
-      <div class="card">
+      <div class="banner-card">
         <%= image_tag "comments.svg", class: "mt-3 mb-3" %>
         <h4>Review us</h4>
         <p>on google chrome extensions & send us a tweet</p>
       </div>
     </div>
+
+    <%= link_to "Start learning", new_user_registration_path, class: "btn btn-lg btn-primary mt-4"  %>
   </div>
 </div>
 

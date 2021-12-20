@@ -1,14 +1,8 @@
-<nav class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
+<nav class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= yield(:navbar_class) %>">
 
     <%= link_to image_tag("UNIVERLAY.png", alt: "logo"), '/', class: 'navbar-brand' %>
 
-    <%= form_tag root_path, method: :get, remote: true do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-line form-control-lg align-items-center",
-      placeholder: "Find a lesson" %>
-      <%= submit_tag "Search", class: "btn btn-outline-light ml-2" %>
-    <% end %>
+
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -16,6 +10,15 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= form_tag root_path, method: :get, remote: true, class: "form-inline" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a lesson" %>
+          <%= submit_tag "Search", class: "btn btn-outline-light ml-2 mr-4" %>
+        <% end %>
+      </li>
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link text-light" %>

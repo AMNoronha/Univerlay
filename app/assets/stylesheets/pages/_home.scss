@@ -16,3 +16,21 @@
 .card-footer {
   background-color: ffffff;
 }
+
+.banner-card {
+  background-color: #ffffff;
+  width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+  color:$dark-blue;
+  h4 {
+    font-weight: bold;
+  }
+}
+
+.banner-card img {
+  height: 100px;
+}
