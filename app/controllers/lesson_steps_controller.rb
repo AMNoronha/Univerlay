@@ -1,6 +1,10 @@
 class LessonStepsController < ApplicationController
   def index
-    @lesson_steps = LessonStep.all
+    lesson = policy_scope(Lesson).find(1)
+    @lesson_steps = lesson.lesson_steps
+    respond_to do |format|
+      format.json { render json: @lesson_steps }
+    end
   end
 
   def pop_up

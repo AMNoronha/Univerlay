@@ -12,5 +12,5 @@ class Lesson < ApplicationRecord
   has_many_attached :photos
 
   validates :title, presence: true
-  validates :photos, presence: true
+  # validates :photos, presence: true
 end
