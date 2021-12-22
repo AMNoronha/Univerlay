@@ -7,11 +7,5 @@ class PagesController < ApplicationController
     else
       @lessons = Lesson.all
     end
-
-    @lesson_progresses = LessonProgress.all.map(&:lesson_id)
-
-    @lessons_filtered = @lessons.reject do |lesson|
-      @lesson_progresses.include?(lesson.id)
-    end
   end
 end
