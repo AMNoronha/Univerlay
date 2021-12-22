@@ -24,6 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import "aos/dist/aos.css";
+import AOS from 'aos';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,4 +37,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   previewImageOnFileSelect();
   initTelInput();
+  AOS.init();
 });
+
+window.addEventListener('load', AOS.refresh)
