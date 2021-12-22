@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= form_tag root_path, method: :get, remote: true, class: "form-inline" do %>
+        <%= form_tag root_path, method: :get, class: "form-inline" do %>
           <%= text_field_tag :query,
             params[:query],
             class: "form-control",
