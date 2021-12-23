@@ -1,5 +1,6 @@
 <%= content_for(:navbar_class, "navbar-home") %>
 
+<a href="" class="top-link hide" id="scrollToTop"><i class="fas fa-3x fa-chevron-circle-up"></i></a>
 <div class="banner d-flex align-items-center">
   <div class="container-fluid text-center">
     <div class="banner-header mt-5 mb-4">
@@ -38,7 +39,7 @@
         <div class="row">
           <% @lessons.each do |lesson| %>
             <div class="col-sm-4 d-flex">
-              <div class="card flex-fill py-0 px-0 shadow p-3 mb-5">
+              <div class="card flex-fill py-0 px-0 shadow p-3 mb-5" data-aos="zoom-in-up" data-aos-duration="1500">
                 <% if lesson.photos.attached? %>
                   <%= cl_image_tag item.photos.first.key, height: 250, crop: :fill, class: "card-img-top", alt: "user uploaded image" %>
                 <% else %>

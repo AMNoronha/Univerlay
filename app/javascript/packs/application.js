@@ -30,14 +30,21 @@ import AOS from 'aos';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { previewImageOnFileSelect } from '../components/photo_preview';
+import { initscrollToTop } from '../components/scroll_to_top';
 import { initTelInput } from '../components/initTelInput';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   previewImageOnFileSelect();
-  initTelInput();
   AOS.init();
+  initscrollToTop();
+});
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your functions here, e.g:
+  // initSelect2();
+  initTelInput();
 });
 
 window.addEventListener('load', AOS.refresh)
