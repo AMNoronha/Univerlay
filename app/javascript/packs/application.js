@@ -32,6 +32,7 @@ import AOS from 'aos';
 import { previewImageOnFileSelect } from '../components/photo_preview';
 import { initscrollToTop } from '../components/scroll_to_top';
 import { initTelInput } from '../components/initTelInput';
+import { initUpdateNavbarOnScroll } from '../components/navbar';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -39,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   previewImageOnFileSelect();
   AOS.init();
   initscrollToTop();
+  initUpdateNavbarOnScroll();
 });
 
 document.addEventListener('turbolinks:load', () => {
