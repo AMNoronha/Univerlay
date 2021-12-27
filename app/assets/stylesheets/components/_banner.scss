@@ -3,9 +3,55 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
+  width: 100%;
   h1 {
     font-size: 45px;
     font-weight: bold;
     color:$light-blue;
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner {
+    h1 {
+      font-size: 28px;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .banner {
+    h1 {
+      font-size: 28px;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .banner {
+    h1 {
+      font-size: 32px;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .banner {
+    h1 {
+      font-size: 45px;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .banner {
+    h1 {
+      font-size: 45px;
+    }
   }
 }

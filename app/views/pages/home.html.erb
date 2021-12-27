@@ -1,8 +1,9 @@
-<%= content_for(:navbar_class, "navbar-home") %>
+<%= content_for(:navbar_class, "navbar-home fixed-top") %>
 
+<a href="" class="top-link hide" id="scrollToTop"><i class="fas fa-3x fa-chevron-circle-up"></i></a>
 <div class="banner d-flex align-items-center">
   <div class="container-fluid text-center">
-    <div class="banner-header mt-5 mb-4">
+    <div class="banner-header mt-4 mb-4">
       <h1>3 Easy Steps<br>
       To learning new software</h1>
     </div>
@@ -28,32 +29,27 @@
     </div>
 
     <%= link_to "Start learning", new_user_registration_path, class: "btn btn-lg btn-primary mt-4"  %>
+    <a href="#lessons-section" class="ctn-icon">
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </a>
   </div>
 </div>
 
-<div class="container-fluid">
-  <br>
-  <h2 class="py-3 text-center">All our available training (<%=@lessons.length %>)</h2>
-      <br>
-        <div class="row">
-          <% @lessons.reverse_each do |lesson| %>
-            <div class="col-sm-4 d-flex">
-              <div class="card flex-fill py-0 px-0 shadow p-3 mb-5" data-aos="zoom-in-up" data-aos-duration="1000">
-                <% if lesson.photos.attached? %>
-                  <%= cl_image_tag item.photos.first.key, height: 250, crop: :fill, class: "card-img-top", alt: "user uploaded image" %>
-                <% else %>
-                  <%= image_tag "https://images.unsplash.com/photo-1464380573004-8ca85a08751a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" %>
-                <% end %>
-                 <div class="card-body">
-                  <h5 class="card-title"><%= lesson.title %></h5>
-                 </div>
-                <div class="card-footer d-flex justify-content-between p-3">
-                  <%= link_to 'More info', lesson_path(lesson), class: "text-light text-decoration-none" %>
-                  <h6 class="text-light m-0">Posted on: <%= lesson.created_at.to_s.split(' ').first %></h6>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-  <div>
+<div class="container">
+    <div data-controller="search-lessons" class="mt-5" id="lessons-section">
+      <%= form_with url: root_path, method: :get, html: { class: "form-inline", data: { search_lessons_target: 'form' } } do |f| %>
+        <%= f.text_field :query,
+                          value: params[:query],
+                          class: "form-control",
+                          placeholder: "Find a lesson",
+                          data: {
+                              search_lessons_target: 'input',
+                              action: 'keyup->search-lessons#update' } %>
+        <%= f.button type: 'submit', class: "btn btn-primary mr-3" do %>
+            <i class="fas fa-search"></i>
+        <% end %>
+      <% end %>
+
+      <%= render 'lessons_list', lessons: @lessons %>
+    </div>
 </div>
