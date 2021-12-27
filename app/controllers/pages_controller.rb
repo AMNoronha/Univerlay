@@ -8,10 +8,9 @@ class PagesController < ApplicationController
       @lessons = Lesson.all
     end
 
-    @lesson_progresses = LessonProgress.all.map(&:lesson_id)
-
-    @lessons_filtered = @lessons.reject do |lesson|
-      @lesson_progresses.include?(lesson.id)
+    respond_to do |format|
+      format.html
+      format.text { render partial: 'pages/lessons_list.html', locals: { lessons: @lessons } }
     end
   end
 end
