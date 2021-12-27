@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+body {
+  background: #f9f9f9;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.main-content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.box {
+  background: #fff;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+#circle-container {
+  position: relative;
+}
+.small-container {
+  height: 40px;
+  width: 40px;
+}
+.course-progress-card_top {
+  padding: 50px;
+  background: #ffb347; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffcc33, #df8505); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #2196f3, #2bdf11); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+}
+.course-progress-card_courses {
+  padding: 15px;
+}
+.course-progress-card_courses .course-list {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: -50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+.course-card {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e39627;
+}
+.course-card__img {
+  margin-right: 15px;
+}
+.course-card__img img {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+}
+.icon-d .fa-java{
+   font-size: 43px;
+    color: #0d84ff;
+    font-weight: 500;
+}
+.icon-d .fa-html5{
+   font-size: 43px;
+    color: #f05a03;
+    font-weight: 500;
+}
+.icon-d .fa-css3-alt{
+   font-size: 43px;
+    color: #f8c405;
+    font-weight: 500;
+}
+.icon-d .fa-react{
+   font-size: 43px;
+    color: #73cbff;
+    font-weight: 500;
+}
+.progress-circle-outer {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(3, 169, 244, 0.2);
+  background: rgba(227, 150, 39, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-circle {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-circle > .inner {
+  position: absolute;
+  color: #fff;
+  font-size: 50px;
+}
+.progress-circle > svg {
+  height: 100%;
+  display: block;
+}
+.progress-circle--small {
+  width: 40px;
+  height: 40px;
+}
+.progress-circle--small > .inner {
+  font-size: 12px;
+  color: #333;
+}
+.btn.btn-primary {
+  background: #e39627;
+  border-color: #e39627;
+  box-shadow: 0 2px 10px rgba(3, 169, 244, 0.2);
+}
+.btn.btn-primary:hover {
+  background: #ffcc33;
+  border-color: #ffcc33;
+}
+@media only screen and (max-width: 600px) {
+  .progress-circle {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .progress-circle-outer {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: rgba(227, 150, 39, 0.32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .progress-circle > .inner {
+    font-size: 35px;
+  }
+  .course-card__img img {
+    height: 55px;
+    width: 55px;
+    border-radius: 5px;
+  }
+  .progress-circle--small {
+    width: 40px;
+    height: 40px;
+  }
+  .progress-circle--small > .inner {
+    font-size: 12px;
+    color: #333;
+  }
+}
