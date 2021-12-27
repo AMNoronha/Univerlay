@@ -6,10 +6,18 @@
 }
 
 .navbar-home {
-  position: absolute;
-  width: 100%;
+  // position: absolute;
+  // width: 100%;
   justify-content: space-between;
   background:transparent;
+  transition: 0.5s background-color ease;
+  font-family: Manrope;
+  color:$white
+}
+
+.navbar-home-blue {
+  justify-content: space-between;
+  background:$dark-blue;
   font-family: Manrope;
   color:$white
 }
