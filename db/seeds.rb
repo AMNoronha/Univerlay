@@ -59,7 +59,7 @@ puts "Lesson progresses created!"
 
 LessonStep.create!(
   lesson_id: 1,
-  pop_up_text: "In the upper-right corner of any page, use the drop-down menu, and select New repository.",
+  pop_up_text: "Select new repository",
   sequence: 1,
   url: "url"
 )
