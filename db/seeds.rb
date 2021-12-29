@@ -59,35 +59,37 @@ puts "Lesson progresses created!"
 
 LessonStep.create!(
   lesson_id: 1,
-  pop_up_text: "Select new repository",
+  pop_up_text: "Select 'New repository'",
   sequence: 1,
-  url: "url"
+  url: "https://github.com/"
 )
 
 LessonStep.create!(
   lesson_id: 1,
-  pop_up_text: "In the Repository name box, enter hello-world.",
+  pop_up_text: "Enter name of repository",
   sequence: 2,
-  url: "url"
+  url: "https://github.com/new"
 )
 
 LessonStep.create!(
   lesson_id: 1,
-  pop_up_text: "In the Description box, write a short description.",
+  pop_up_text: "Enter short description of repository",
   sequence: 3,
-  url: "url"
+  url: "https://github.com/new"
 )
 
 LessonStep.create!(
   lesson_id: 1,
-  pop_up_text: "Select Add a README file.",
+  pop_up_text: "Add a README file",
   sequence: 4,
-  url: "url"
+  url: "https://github.com/new"
 )
 
 LessonStep.create!(
   lesson_id: 1,
-  pop_up_text: "Click Create repository.",
+  pop_up_text: "Click 'Create repository'",
   sequence: 5,
-  url: "url"
+  url: "https://github.com/new"
 )
+
+puts "Lesson steps for Create Github Repo created!"
