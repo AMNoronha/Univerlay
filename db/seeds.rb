@@ -23,17 +23,23 @@ User.create!(
 
 puts "Users created!"
 
-Lesson.create!(
+repo = Lesson.create!(
   title: "Create Github repository"
 )
 
-Lesson.create!(
+repo.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-repo.jpeg')), filename: 'github-repo.jpeg')
+
+branch = Lesson.create!(
   title: "Create a branch on Github"
 )
 
-Lesson.create!(
+branch.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-branch.jpeg')), filename: 'github-branch.jpeg')
+
+pull = Lesson.create!(
   title: "Opening a pull request on Github"
 )
+
+pull.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-pull.jpeg')), filename: 'github-pull.jpeg')
 
 puts "Lessons created!"
 
@@ -50,3 +56,38 @@ LessonProgress.create!(
 )
 
 puts "Lesson progresses created!"
+
+LessonStep.create!(
+  lesson_id: 1,
+  pop_up_text: "In the upper-right corner of any page, use the drop-down menu, and select New repository.",
+  sequence: 1,
+  url: "url"
+)
+
+LessonStep.create!(
+  lesson_id: 1,
+  pop_up_text: "In the Repository name box, enter hello-world.",
+  sequence: 2,
+  url: "url"
+)
+
+LessonStep.create!(
+  lesson_id: 1,
+  pop_up_text: "In the Description box, write a short description.",
+  sequence: 3,
+  url: "url"
+)
+
+LessonStep.create!(
+  lesson_id: 1,
+  pop_up_text: "Select Add a README file.",
+  sequence: 4,
+  url: "url"
+)
+
+LessonStep.create!(
+  lesson_id: 1,
+  pop_up_text: "Click Create repository.",
+  sequence: 5,
+  url: "url"
+)

@@ -9,7 +9,7 @@ class Lesson < ApplicationRecord
   has_many :lesson_progresses, dependent: :destroy
   has_many :lesson_steps, dependent: :destroy
   has_many :users, through: :lesson_progresses
-  has_many_attached :photos
+  has_one_attached :photo
 
   validates :title, presence: true
   # validates :photos, presence: true
