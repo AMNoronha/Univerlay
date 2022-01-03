@@ -2,7 +2,7 @@ class LessonProgressesController < ApplicationController
   before_action :set_lesson_progress, only: %i[show edit update]
 
   def index
-    @lesson_progresses = policy_scope(Lesson_progress)
+    @lesson_progresses = policy_scope(LessonProgress)
   end
 
   def show
