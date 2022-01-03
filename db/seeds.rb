@@ -70,7 +70,7 @@ LessonStep.create!(
   lesson_id: 1,
   title: "Step 2",
   DOM_Id: ".js-template-repository-select",
-  pop_up_text: "Enter name of repository",
+  pop_up_text: "Select a template, if you would like to (not necessary)",
   sequence: 2,
   url: "https://github.com/new"
 )
@@ -79,7 +79,7 @@ LessonStep.create!(
   lesson_id: 1,
   title: "Step 3",
   DOM_Id: "#repository_name",
-  pop_up_text: "Enter short description of repository",
+  pop_up_text: "Enter short memorable name for the repository",
   sequence: 3,
   url: "https://github.com/new"
 )
@@ -87,8 +87,8 @@ LessonStep.create!(
 LessonStep.create!(
   lesson_id: 1,
   title: "Step 4",
-  DOM_Id: "#",
-  pop_up_text: "Add a README file",
+  DOM_Id: "#repository_description",
+  pop_up_text: "Enter a short description if you'd like to do so",
   sequence: 4,
   url: "https://github.com/new"
 )
@@ -96,8 +96,44 @@ LessonStep.create!(
 LessonStep.create!(
   lesson_id: 1,
   title: "Step 5",
-  DOM_Id: "#",
-  pop_up_text: "Click 'Create repository'",
+  DOM_Id: ".js-privacy-toggle-label-public",
+  pop_up_text: "Select if your repository should be public or private",
+  sequence: 5,
+  url: "https://github.com/new"
+)
+
+LessonStep.create!(
+  lesson_id: 1,
+  title: "Step 6",
+  DOM_Id: "#repository_auto_init",
+  pop_up_text: "We suggest clicking this to add a README file",
+  sequence: 5,
+  url: "https://github.com/new"
+)
+
+LessonStep.create!(
+  lesson_id: 1,
+  title: "Step 7",
+  DOM_Id: "#repository_gitignore_template_toggle",
+  pop_up_text: "We also suggest adding a .gitignore file",
+  sequence: 5,
+  url: "https://github.com/new"
+)
+
+LessonStep.create!(
+  lesson_id: 1,
+  title: "Step 8",
+  DOM_Id: "#repository_license_template_toggle",
+  pop_up_text: "Add a license if desired",
+  sequence: 5,
+  url: "https://github.com/new"
+)
+
+LessonStep.create!(
+  lesson_id: 1,
+  title: "Step 9 ALMOST DONE",
+  DOM_Id: ".btn-primary",
+  pop_up_text: "Press to create the new respository",
   sequence: 5,
   url: "https://github.com/new"
 )
