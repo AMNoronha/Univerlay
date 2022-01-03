@@ -107,7 +107,7 @@ LessonStep.create!(
   title: "Step 6",
   DOM_Id: "#repository_auto_init",
   pop_up_text: "We suggest clicking this to add a README file",
-  sequence: 5,
+  sequence: 6,
   url: "https://github.com/new"
 )
 
@@ -116,7 +116,7 @@ LessonStep.create!(
   title: "Step 7",
   DOM_Id: "#repository_gitignore_template_toggle",
   pop_up_text: "We also suggest adding a .gitignore file",
-  sequence: 5,
+  sequence: 7,
   url: "https://github.com/new"
 )
 
@@ -125,7 +125,7 @@ LessonStep.create!(
   title: "Step 8",
   DOM_Id: "#repository_license_template_toggle",
   pop_up_text: "Add a license if desired",
-  sequence: 5,
+  sequence: 8,
   url: "https://github.com/new"
 )
 
@@ -134,7 +134,7 @@ LessonStep.create!(
   title: "Step 9 ALMOST DONE",
   DOM_Id: ".btn-primary",
   pop_up_text: "Press to create the new respository",
-  sequence: 5,
+  sequence: 9,
   url: "https://github.com/new"
 )
 
