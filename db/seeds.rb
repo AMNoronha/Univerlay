@@ -59,6 +59,8 @@ puts "Lesson progresses created!"
 
 LessonStep.create!(
   lesson_id: 1,
+  title: "Step 1",
+  DOM_Id: ".octicon.octicon-plus",
   pop_up_text: "Select 'New repository'",
   sequence: 1,
   url: "https://github.com/"
@@ -66,6 +68,8 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
+  title: "Step 2",
+  DOM_Id: ".js-template-repository-select",
   pop_up_text: "Enter name of repository",
   sequence: 2,
   url: "https://github.com/new"
@@ -73,6 +77,8 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
+  title: "Step 3",
+  DOM_Id: "#repository_name",
   pop_up_text: "Enter short description of repository",
   sequence: 3,
   url: "https://github.com/new"
@@ -80,6 +86,8 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
+  title: "Step 4",
+  DOM_Id: "#",
   pop_up_text: "Add a README file",
   sequence: 4,
   url: "https://github.com/new"
@@ -87,6 +95,8 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
+  title: "Step 5",
+  DOM_Id: "#",
   pop_up_text: "Click 'Create repository'",
   sequence: 5,
   url: "https://github.com/new"
