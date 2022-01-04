@@ -2,7 +2,7 @@ class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show]
 
   def index
-    @lesson = Lesson.all
+    @lessons = policy_scope(Lesson)
   end
 
   def show
