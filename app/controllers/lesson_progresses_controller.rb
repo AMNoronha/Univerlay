@@ -5,6 +5,7 @@ class LessonProgressesController < ApplicationController
   def index
     @lesson_progresses = policy_scope(LessonProgress)
     respond_to do |format|
+      format.html
       format.json { render json: @lesson_progresses }
     end
   end
