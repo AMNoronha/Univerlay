@@ -55,6 +55,12 @@ LessonProgress.create!(
   current_step: 1
 )
 
+LessonProgress.create!(
+  user_id: 1,
+  lesson_id: 3,
+  current_step: 1
+)
+
 puts "Lesson progresses created!"
 
 LessonStep.create!(
@@ -139,3 +145,62 @@ LessonStep.create!(
 )
 
 puts "Lesson steps for Create Github Repo created!"
+
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Step 1",
+  DOM_Id: "",
+  pop_up_text: "At your local repository (on your terminal), make sure you have run git add, git commit & git push origin branch-name",
+  sequence: 1,
+  url: "https://github.com/"
+)
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Step 2",
+  DOM_Id: ".flash-warn",
+  pop_up_text: "Click the compare & pull request button",
+  sequence: 2,
+  url: "https://github.com/"
+)
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Step 3",
+  DOM_Id: "#pull_request_title",
+  pop_up_text: "Enter short memorable title for this pull request",
+  sequence: 3,
+  url: "https://github.com/"
+)
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Step 4",
+  DOM_Id: "#pull_request_body",
+  pop_up_text: "Write comments on what changes you have made to the code",
+  sequence: 4,
+  url: "https://github.com/"
+)
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Step 5",
+  DOM_Id: ".BtnGroup",
+  pop_up_text: "Click the Create Pull Request button",
+  sequence: 5,
+  url: "https://github.com/"
+)
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Step 6",
+  DOM_Id: ".btn-group-merge",
+  pop_up_text: "Click the merge button if there are no conflicts with the base branch",
+  sequence: 6,
+  url: "https://github.com/"
+)
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Step 7",
+  DOM_Id: "#.btn-primary",
+  pop_up_text: "Click the confirm merge button",
+  sequence: 7,
+  url: "https://github.com/"
+)
+
+puts "Lesson steps for Create Pull Request created!"
