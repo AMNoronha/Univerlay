@@ -2,7 +2,14 @@ class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show]
 
   def index
-    @lessons = policy_scope(Lesson)
+    # @lessons = policy_scope(Lesson)
+    @lesson_progresses = policy_scope(LessonProgress)
+    @user_lesson_progresses = @lesson_progresses.select do |lesson_progress|
+      lesson_progress.user_id == current_user.id
+    end
+    @user_lessons = @user_lesson_progresses.map do |user_lesson_progress|
+      Lesson.find(user_lesson_progress.lesson_id)
+    end
   end
 
   def show
