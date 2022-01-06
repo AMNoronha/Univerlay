@@ -1,13 +1,13 @@
 <div class="container">
-  <h1 style="color:#00BFFF;text-align:center;">
+  <h1 class="text-center mt-3">
     My Lessons
   </h1>
 
-  <div data-search-lessons-target="list">
-    <% if params[:query].blank? %>
-      <h3 class="mt-3">All your current lessons (<%= @user_lesson_progresses.length %>)</h3>
+  <div>
+    <% if @lesson_progresses.length <= 1 %>
+      <h3 class="mt-3">All my current lesson (<%= @lesson_progresses.length %>)</h3>
     <% else %>
-        <h3 class="mt-3"><%= pluralize @user_lesson_progresses.count, 'result' %> for <code><%= params[:query] %></code></h3>
+      <h3 class="mt-3">All my current lessons (<%= @lesson_progresses.length %>)</h3>
     <% end %>
     <div class="lesson-cards">
       <div class="row">
