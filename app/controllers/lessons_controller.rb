@@ -12,10 +12,10 @@ class LessonsController < ApplicationController
     end
   end
 
-  def show
-    authorize @lesson
-    @lesson_progress = LessonProgress.new
-  end
+  # def show
+  #   authorize @lesson
+  #   @lesson_progress = LessonProgress.new
+  # end
 
   def new
     @lesson = Lesson.new
