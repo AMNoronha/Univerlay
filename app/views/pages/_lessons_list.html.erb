@@ -1,6 +1,6 @@
 <div data-search-lessons-target="list">
   <% if params[:query].blank? %>
-    <h3 class="mt-3">All our available training (<%=@lessons.length %>)</h3>
+    <h3 class="mt-3">All our available trainings (<%=@lessons.length %>)</h3>
   <% else %>
     <h3 class="mt-3"><%= pluralize @lessons.count, 'result' %> for <code><%= params[:query] %></code></h3>
   <% end %>
@@ -16,7 +16,21 @@
             <% end %>
             <div class="card-body">
               <h5 class="card-title"><%= lesson.title %></h5>
-              <%= link_to 'More info', lesson_lesson_progresses_path(lesson), class: "btn btn-primary" %>
+              <% if current_user.nil? %>
+                <%= link_to 'Start lesson', new_user_session_path, class: "btn btn-primary" %>
+              <% else %>
+                <% if @user_lesson_progresses.find_by(lesson_id: lesson.id).nil? %>
+                  <%= simple_form_for @lesson_progress, url: lesson_lesson_progresses_path(lesson.id) do |f| %>
+                    <div class="d-none">
+                      <%= f.input :current_step, input_html: { value: 1 } %>
+                      <%= f.input :lesson_id, input_html: { value: lesson.id } %>
+                    </div>
+                    <%= f.submit 'Start lesson', class: "btn btn-primary" %>
+                  <% end %>
+                <% else %>
+                  <%= link_to 'Continue lesson', lesson_lesson_progresses_path(lesson), class: "btn btn-primary" %>
+                <% end %>
+              <% end %>
             </div>
           </div>
         </div>

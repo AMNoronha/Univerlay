@@ -4,8 +4,8 @@ class LessonProgressesController < ApplicationController
 
   def index
     @lesson_progresses = policy_scope(LessonProgress)
-    @lessons = Lesson.all
-    @lesson = @lessons.find(params[:lesson_id])
+    # @lessons = Lesson.all
+    # @lesson = @lessons.find(params[:lesson_id])
 
     @lesson = policy_scope(Lesson).find(params[:lesson_id])
     @lesson_steps = @lesson.lesson_steps
@@ -22,20 +22,22 @@ class LessonProgressesController < ApplicationController
   #   @lesson = @lessons.find_by(lesson_id: @lesson_progress.id)
   # end
 
-  def new
-    @lesson_progress = LessonProgress.new
-    authorize @lesson_progress
-  end
+  # def new
+  #   @lesson_progress = LessonProgress.new
+  #   authorize @lesson_progress
+  # end
 
   def create
     @lesson_progress = LessonProgress.new(lesson_progress_params)
+    @lesson = Lesson.find(params[:lesson_id])
     @lesson_progress.user = current_user
+    @lesson_progress.lesson = @lesson
     authorize @lesson_progress
 
     if @lesson_progress.save
-      redirect_to @lesson_progress
-    else
-      render :new
+      redirect_to lesson_lesson_progresses_path(@lesson)
+    # else
+    #   render 'pages/home'
     end
   end
 
@@ -58,6 +60,6 @@ class LessonProgressesController < ApplicationController
   end
 
   def lesson_progress_params
-    params.require(:lesson_progress).permit(:current_step, photos: [])
+    params.require(:lesson_progress).permit(:current_step)
   end
 end
