@@ -59,16 +59,16 @@ puts "Lesson progresses created!"
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 1",
+  title: "Welcome to Univerlay's Guide to Creating a New Repo",
   DOM_Id: ".octicon.octicon-plus",
-  pop_up_text: "Select 'New repository'",
+  pop_up_text: "Select 'New repository' and move on to next page",
   sequence: 1,
   url: "https://github.com/"
 )
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 2",
+  title: "Step 2/9",
   DOM_Id: ".js-template-repository-select",
   pop_up_text: "Select a template, if you would like to (not necessary)",
   sequence: 2,
@@ -77,7 +77,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 3",
+  title: "Step 3/9",
   DOM_Id: "#repository_name",
   pop_up_text: "Enter short memorable name for the repository",
   sequence: 3,
@@ -86,7 +86,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 4",
+  title: "Step 4/9",
   DOM_Id: "#repository_description",
   pop_up_text: "Enter a short description if you'd like to do so",
   sequence: 4,
@@ -95,7 +95,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 5",
+  title: "Step 5/9",
   DOM_Id: ".js-privacy-toggle-label-public",
   pop_up_text: "Select if your repository should be public or private",
   sequence: 5,
@@ -104,7 +104,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 6",
+  title: "Step 6/9",
   DOM_Id: "#repository_auto_init",
   pop_up_text: "We suggest clicking this to add a README file",
   sequence: 6,
@@ -113,7 +113,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 7",
+  title: "Step 7/9",
   DOM_Id: "#repository_gitignore_template_toggle",
   pop_up_text: "We also suggest adding a .gitignore file",
   sequence: 7,
@@ -122,7 +122,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 8",
+  title: "Step 8/9",
   DOM_Id: "#repository_license_template_toggle",
   pop_up_text: "Add a license if desired",
   sequence: 8,
@@ -131,9 +131,9 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 9 ALMOST DONE",
+  title: "Step 9/9 The last step",
   DOM_Id: ".btn-primary",
-  pop_up_text: "Press to create the new respository",
+  pop_up_text: "Click here to create the new respository",
   sequence: 9,
   url: "https://github.com/new"
 )
