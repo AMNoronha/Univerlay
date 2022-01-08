@@ -9,6 +9,6 @@ class LessonStepsController < ApplicationController
     end
   end
 
-  def pop_up
-  end
+  # def pop_up
+  # end
 end
