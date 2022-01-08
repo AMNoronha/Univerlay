@@ -74,7 +74,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 2/9",
+  title: "Let's start by selecting a template for the repo",
   DOM_Id: ".js-template-repository-select",
   pop_up_text: "Select a template, if you would like to (not necessary)",
   sequence: 2,
@@ -83,7 +83,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 3/9",
+  title: "Next name the repo",
   DOM_Id: "#repository_name",
   pop_up_text: "Enter short memorable name for the repository",
   sequence: 3,
@@ -92,7 +92,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 4/9",
+  title: "Add a short description",
   DOM_Id: "#repository_description",
   pop_up_text: "Enter a short description if you'd like to do so",
   sequence: 4,
@@ -101,7 +101,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 5/9",
+  title: "Should the repo be public (see by everyone) or private",
   DOM_Id: ".js-privacy-toggle-label-public",
   pop_up_text: "Select if your repository should be public or private",
   sequence: 5,
@@ -110,7 +110,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 6/9",
+  title: "Add a README file",
   DOM_Id: "#repository_auto_init",
   pop_up_text: "We suggest clicking this to add a README file",
   sequence: 6,
@@ -119,7 +119,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 7/9",
+  title: "Add a .gitignore file (recommended)",
   DOM_Id: "#repository_gitignore_template_toggle",
   pop_up_text: "We also suggest adding a .gitignore file",
   sequence: 7,
@@ -128,7 +128,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 8/9",
+  title: "Add a license under which the code is published",
   DOM_Id: "#repository_license_template_toggle",
   pop_up_text: "Add a license if desired",
   sequence: 8,
@@ -137,7 +137,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "Step 9/9 The last step",
+  title: "The last step",
   DOM_Id: ".btn-primary",
   pop_up_text: "Click here to create the new respository",
   sequence: 9,
