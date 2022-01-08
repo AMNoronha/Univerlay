@@ -5,7 +5,12 @@ class Api::LessonProgressPolicy < ApplicationPolicy
       # scope.where(user: user)
     end
   end
+
   def index?
+    true
+  end
+
+  def update?
     true
   end
 end
