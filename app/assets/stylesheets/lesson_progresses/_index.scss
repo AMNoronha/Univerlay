@@ -6,9 +6,19 @@
 // a {
 //   text-decoration: none;
 // }
+
+// Header
+.header {
+  padding: 30px;
+  text-align: center;
+  color: #4169E1;
+  font-size: 25px;
+}
+
+// Main Content
 .main-content {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .box {
   background: #fff;
@@ -169,9 +179,9 @@
   &::before {
     display: inline-block;
     content: "";
-    position: absolute;
-    top: 0;
-    left: 15px;
+    // position: absolute;
+    // top: 0;
+    // left: 15px;
     width: 10px;
     height: 100%;
     border-left: 2px solid #ccc;
@@ -198,10 +208,10 @@
       content: "";
       display: inline-block;
       position: absolute;
-      top: 0;
+      top: 4px;
       left: -37px;
-      width: 12px;
-      height: 12px;
+      width: 17px;
+      height: 17px;
       border: 2px solid #ccc;
       border-radius: 50%;
       background-color: #fff;
@@ -209,11 +219,11 @@
 
     &.is-done {
       &::before {
-        border-left: 2px solid green;
+        // border-left: 2px solid green;
       }
       &::after {
         content: "✔";
-        font-size: 10px;
+        font-size: 8px;
         color: #fff;
         text-align: center;
         border: 2px solid green;
@@ -223,17 +233,17 @@
 
     &.current {
       &::before {
-        border-left: 2px solid green;
+        // border-left: 2px solid green;
       }
 
       &::after {
         content: "";
         padding-top: 1px;
-        width: 19px;
-        height: 18px;
-        top: -4px;
+        width: 15px;
+        height: 15px;
+        top: 5px;
         left: -40px;
-        font-size: 14px;
+        font-size: 10px;
         text-align: center;
         color: green;
         border: 2px solid green;
