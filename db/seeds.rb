@@ -158,7 +158,7 @@ LessonStep.create!(
   pop_up_text: "At your local repository (on your terminal), make sure you have run git add, git commit & git push origin branch-name",
   sequence: 1,
   url: "^https://github.com/\\w+/\\w+-?\\w*-?\\w*-?\\w*$"
-
+)
 LessonStep.create!(
   lesson_id: 3,
   title: "Step 2",
