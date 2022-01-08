@@ -1,0 +1,9 @@
+a.social-link {
+  text-decoration: none;
+}
+
+.fab {
+  &:hover {
+    color: $dark-blue;
+  }
+}
