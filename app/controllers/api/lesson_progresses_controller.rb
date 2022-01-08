@@ -1,5 +1,5 @@
 class Api::LessonProgressesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :update]
   skip_before_action :verify_authenticity_token
 
   def index
@@ -16,6 +16,6 @@ class Api::LessonProgressesController < ApplicationController
     @lesson_progresses = policy_scope(LessonProgress, policy_scope_class: Api::LessonProgressPolicy::Scope)
     @lesson_progress = @lesson_progresses.find(params[:id])
     @lesson_progress.update(current_step: params[:current_step])
-    authorize @lesson_progresses
+    authorize @lesson_progress
   end
 end
