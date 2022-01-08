@@ -43,25 +43,25 @@ pull.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-pull.j
 
 puts "Lessons created!"
 
-# LessonProgress.create!(
-#   user_id: 1,
-#   lesson_id: 1,
-#   current_step: 1
-# )
+LessonProgress.create!(
+  user_id: 1,
+  lesson_id: 1,
+  current_step: 1
+)
 
-# LessonProgress.create!(
-#   user_id: 2,
-#   lesson_id: 1,
-#   current_step: 1
-# )
+LessonProgress.create!(
+  user_id: 2,
+  lesson_id: 1,
+  current_step: 1
+)
 
-# LessonProgress.create!(
-#   user_id: 1,
-#   lesson_id: 3,
-#   current_step: 1
-# )
+LessonProgress.create!(
+  user_id: 1,
+  lesson_id: 3,
+  current_step: 1
+)
 
-# puts "Lesson progresses created!"
+puts "Lesson progresses created!"
 
 LessonStep.create!(
   lesson_id: 1,
@@ -146,11 +146,6 @@ LessonStep.create!(
 
 puts "Lesson steps for Create Github Repo created!"
 
-LessonProgress.create!(
-  user_id: 1,
-  lesson_id: 3,
-  current_step: 1
-)
 LessonStep.create!(
   lesson_id: 3,
   title: "Step 1",
