@@ -29,17 +29,17 @@ repo = Lesson.create!(
 
 repo.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-repo.jpeg')), filename: 'github-repo.jpeg')
 
-branch = Lesson.create!(
-  title: "Create a branch on Github"
-)
-
-branch.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-branch.jpeg')), filename: 'github-branch.jpeg')
-
 pull = Lesson.create!(
   title: "Opening a pull request on Github"
 )
 
 pull.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-pull.jpeg')), filename: 'github-pull.jpeg')
+
+branch = Lesson.create!(
+  title: "Create a branch on Github"
+)
+
+branch.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-branch.jpeg')), filename: 'github-branch.jpeg')
 
 puts "Lessons created!"
 
@@ -147,16 +147,16 @@ LessonStep.create!(
 puts "Lesson steps for Create Github Repo created!"
 
 LessonStep.create!(
-  lesson_id: 3,
-  title: "Step 1",
+  lesson_id: 2,
+  title: "Welcome to Univerlay's Guide to Opening A Pull Request",
   DOM_Id: "#pull-requests-tab",
   pop_up_text: "At your local repository (on your terminal), make sure you have run git add, git commit & git push origin branch-name",
   sequence: 1,
   url: "^https://github.com/\\w+/\\w+-?\\w*-?\\w*-?\\w*$"
 )
 LessonStep.create!(
-  lesson_id: 3,
-  title: "Step 2",
+  lesson_id: 2,
+  title: "Step 2/7",
   DOM_Id: ".flex-shrink-0.btn.btn-primary.ml-sm-3.mt-2.mt-sm-n2.mb-sm-n2.mr-sm-n1.flex-self-center",
   pop_up_text: "Click the compare & pull request button",
   sequence: 2,
