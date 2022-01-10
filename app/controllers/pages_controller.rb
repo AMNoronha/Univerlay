@@ -15,5 +15,7 @@ class PagesController < ApplicationController
       format.html
       format.text { render partial: 'pages/lessons_list.html', locals: { lessons: @lessons } }
     end
+
+    # raise
   end
 end

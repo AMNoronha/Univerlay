@@ -11,10 +11,10 @@ class LessonProgressesController < ApplicationController
     @lesson_steps = @lesson.lesson_steps
     @progress = @lesson_progresses.find_by(lesson_id: params[:lesson_id], user_id: current_user.id)
 
-    # respond_to do |format|
-    #   format.html
-    #   format.json { render json: @lesson_progresses }
-    # end
+    respond_to do |format|
+      format.html
+      format.json { render json: @lesson_progresses }
+    end
   end
 
   # def show
