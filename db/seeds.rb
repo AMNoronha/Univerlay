@@ -67,9 +67,9 @@ LessonStep.create!(
     lesson_id: 1,
     title: "Welcome to Univerlay's Guide to Creating a New Repo",
     DOM_Id: ".logged-in",
-    pop_up_text: "Instructions: Hit NEXT to move to the next step, BACK to go back, ESC to exit",
+    pop_up_text: "Instructions:  Click NEXT to move to the next step, BACK to go back, and ESC to exit",
     sequence: 1,
-    url: "https://github.com/"
+    url: "^https://github.com/$"
 )
 
 LessonStep.create!(
@@ -78,7 +78,7 @@ LessonStep.create!(
   DOM_Id: ".octicon.octicon-plus",
   pop_up_text: "Select 'New repository' and move on to next page",
   sequence: 2,
-  url: "https://github.com/"
+  url: "^https://github.com/$"
 )
 
 LessonStep.create!(
