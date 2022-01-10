@@ -64,12 +64,21 @@ LessonProgress.create!(
 puts "Lesson progresses created!"
 
 LessonStep.create!(
+    lesson_id: 1,
+    title: "Welcome to Univerlay's Guide to Creating a New Repo",
+    DOM_Id: ".logged-in",
+    pop_up_text: "Instructions: Hit NEXT to move to the next step, BACK to go back, ESC to exit",
+    sequence: 1,
+    url: "https://github.com/"
+)
+
+LessonStep.create!(
   lesson_id: 1,
-  title: "Welcome to Univerlay's Guide to Creating a New Repo",
+  title: "Start",
   DOM_Id: ".octicon.octicon-plus",
   pop_up_text: "Select 'New repository' and move on to next page",
-  sequence: 1,
-  url: "^https://github.com/$"
+  sequence: 2,
+  url: "https://github.com/"
 )
 
 LessonStep.create!(
@@ -77,7 +86,7 @@ LessonStep.create!(
   title: "Template",
   DOM_Id: ".js-template-repository-select",
   pop_up_text: "Select a template, if you would like to (not necessary)",
-  sequence: 2,
+  sequence: 3,
   url: "^https://github.com/new$"
 )
 
@@ -86,7 +95,7 @@ LessonStep.create!(
   title: "Name",
   DOM_Id: "#repository_name",
   pop_up_text: "Enter short memorable name for the repository",
-  sequence: 3,
+  sequence: 4,
   url: "^https://github.com/new$"
 )
 
@@ -95,7 +104,7 @@ LessonStep.create!(
   title: "Description",
   DOM_Id: "#repository_description",
   pop_up_text: "Enter a short description if you'd like to do so",
-  sequence: 4,
+  sequence: 5,
   url: "^https://github.com/new$"
 )
 
@@ -104,7 +113,7 @@ LessonStep.create!(
   title: "Public or Private",
   DOM_Id: ".js-privacy-toggle-label-public",
   pop_up_text: "Select if your repository should be public or private",
-  sequence: 5,
+  sequence: 6,
   url: "^https://github.com/new$"
 )
 
@@ -113,7 +122,7 @@ LessonStep.create!(
   title: "README file",
   DOM_Id: "#repository_auto_init",
   pop_up_text: "We suggest clicking this to add a README file",
-  sequence: 6,
+  sequence: 7,
   url: "^https://github.com/new$"
 )
 
@@ -122,7 +131,7 @@ LessonStep.create!(
   title: "GITIGNORE",
   DOM_Id: "#repository_gitignore_template_toggle",
   pop_up_text: "We also suggest adding a .gitignore file",
-  sequence: 7,
+  sequence: 8,
   url: "^https://github.com/new$"
 )
 
@@ -131,7 +140,7 @@ LessonStep.create!(
   title: "License",
   DOM_Id: "#repository_license_template_toggle",
   pop_up_text: "Add a license if desired",
-  sequence: 8,
+  sequence: 9,
   url: "^https://github.com/new$"
 )
 
@@ -140,7 +149,7 @@ LessonStep.create!(
   title: "CREATE",
   DOM_Id: ".btn-primary",
   pop_up_text: "Click here to create the new respository",
-  sequence: 9,
+  sequence: 10,
   url: "^https://github.com/new$"
 )
 
