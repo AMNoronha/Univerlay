@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
+  acts_as_token_authentication_handler_for User, fallback: :none
+  protect_from_forgery with: :null_session, if: :json_request?
+
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
-
   include Pundit
 
   # Pundit: white-list approach.
@@ -23,9 +25,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :phone_number, :photo])
   end
 
+
   private
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+  end
+
+  def json_request?
+    request.format.json?
   end
 end
