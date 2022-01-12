@@ -23,7 +23,14 @@
             <%= f.input :password_confirmation,
                         required: false,
                         input_html: { autocomplete: "new-password" } %>
-            <%= f.input :photo, as: :file, label: 'Upload Profile Picture (Optional)' %>
+            <div class="add-photo d-flex align-items-start mb-3">
+              <%= image_tag "", width: 150, class: "d-none mr-2", id: "photo-preview" %>
+              <%= f.input :photo,
+                          as: :file,
+                          label: '📷 Upload Profile Image',
+                          input_html: { class: "d-none" },
+                          label_html: { class: "upload-photo" } %>
+            </div>
             <%= f.input :current_password,
                         hint: "we need your current password to confirm your changes",
                         required: true,
