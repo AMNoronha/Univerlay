@@ -4,9 +4,6 @@ class LessonProgressesController < ApplicationController
 
   def index
     @lesson_progresses = policy_scope(LessonProgress)
-    # @lessons = Lesson.all
-    # @lesson = @lessons.find(params[:lesson_id])
-
     @lesson = policy_scope(Lesson).find(params[:lesson_id])
     @lesson_steps = @lesson.lesson_steps
     @progress = @lesson_progresses.find_by(lesson_id: params[:lesson_id], user_id: current_user.id)
