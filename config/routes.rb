@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    resources :lessons, only: [:index]
+  end
+
   resources :lessons do
     resources :lesson_progresses, only: [:index, :show, :create, :update]
     resources :lesson_steps, only: [:index] do
