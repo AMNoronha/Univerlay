@@ -45,10 +45,16 @@ class LessonProgressesController < ApplicationController
   end
 
   def update
-    if @lesson_progress.update(lesson_progress_params)
-      redirect_to @lesson_progress
-    else
-      render :edit
+    @lesson_progresses = policy_scope(LessonProgress)
+    @progress = @lesson_progresses.find_by(lesson_id: params[:lesson_id], user_id: current_user.id)
+
+    @progress.current_step = params[:lesson_progress][:current_step].to_i
+
+    @lesson = Lesson.find(params[:lesson_id])
+    if @progress.update(lesson_progress_params)
+      redirect_to lesson_lesson_progresses_path(@lesson)
+    # else
+    #   render :edit
     end
   end
 
