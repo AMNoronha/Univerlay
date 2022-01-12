@@ -34,7 +34,7 @@
                         <div class="StepProgress"><i class="StepProgress-item is-done"></i></div>
                       </div>
                       <div class="course-card__text">
-                        <h6 class="mb-0"><a href="#!" class="text-dark">Step <%= lesson_step.sequence %>: <%= lesson_step.pop_up_text %></a></h6>
+                        <h6 class="mb-0"><p class="text-dark">Step <%= lesson_step.sequence %>: <%= lesson_step.pop_up_text %></p></h6>
                       </div>
                     </div>
                   </div>
@@ -45,7 +45,7 @@
                         <div class="StepProgress"><i class="StepProgress-item current"></i></div>
                       </div>
                       <div class="course-card__text">
-                        <h6 class="mb-0"><a href="#!" class="text-dark">Step <%= lesson_step.sequence %>: <%= lesson_step.pop_up_text %></a></h6>
+                        <h6 class="mb-0"><p class="text-dark">Step <%= lesson_step.sequence %>: <%= lesson_step.pop_up_text %></p></h6>
                       </div>
                     </div>
                   </div>
@@ -56,6 +56,16 @@
                 <form action="https://github.com/">
                   <button class="btn btn-primary btn-block">Click to lesson</button>
                 </form>
+                <br>
+
+                <%= simple_form_for [@lesson, @progress], url: lesson_lesson_progress_path(@lesson, @progress), method: :put do |f| %>
+                    <div class="">
+                      <%= f.input :current_step, input_html: { value: 1 } %>
+                      <%= f.input :lesson_id, input_html: { value: @lesson.id } %>
+                    </div>
+                      <%= f.submit 'Reset', class: "btn btn-primary" %>
+                <% end %>
+
               </div>
             </div>
           </div>
