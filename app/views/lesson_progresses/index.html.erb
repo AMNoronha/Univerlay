@@ -13,7 +13,7 @@
       <h1 class="text-center text-uppercase">Lesson: <%= @lesson.title %></h1>
     </div>
     <div class="row">
-      <div class="col-sm-4 offset-sm-4">
+      <div class="col-md-8 offset-md-2">
         <div class="box course-progress-card">
           <div class="course-progress-card_top">
             <div class="progress-circle-outer">
@@ -59,11 +59,11 @@
                 <br>
 
                 <%= simple_form_for [@lesson, @progress], url: lesson_lesson_progress_path(@lesson, @progress), method: :put do |f| %>
-                    <div class="">
+                    <div class="d-none">
                       <%= f.input :current_step, input_html: { value: 1 } %>
                       <%= f.input :lesson_id, input_html: { value: @lesson.id } %>
                     </div>
-                      <%= f.submit 'Reset', class: "btn btn-primary" %>
+                      <%= f.submit 'Reset', class: "btn btn-warning" %>
                 <% end %>
 
               </div>
