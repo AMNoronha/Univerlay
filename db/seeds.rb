@@ -24,19 +24,19 @@ User.create!(
 puts "Users created!"
 
 repo = Lesson.create!(
-  title: "Create Github repository"
+  title: "Create a new Github repository"
 )
 
 repo.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-repo.jpeg')), filename: 'github-repo.jpeg')
 
 branch = Lesson.create!(
-  title: "Create a branch on Github"
+  title: "Import an existing repository into Github"
 )
 
 branch.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-branch.jpeg')), filename: 'github-branch.jpeg')
 
 pull = Lesson.create!(
-  title: "Opening a pull request on Github"
+  title: "Open a pull request on Github"
 )
 
 pull.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-pull.jpeg')), filename: 'github-pull.jpeg')
@@ -57,6 +57,12 @@ LessonProgress.create!(
 
 LessonProgress.create!(
   user_id: 1,
+  lesson_id: 2,
+  current_step: 1
+)
+
+LessonProgress.create!(
+  user_id: 1,
   lesson_id: 3,
   current_step: 1
 )
@@ -65,7 +71,7 @@ puts "Lesson progresses created!"
 
 LessonStep.create!(
     lesson_id: 1,
-    title: "Welcome to Univerlay's Guide to Creating a New Repo",
+    title: "Welcome to Univerlay's Guide to Creating a New Repository",
     DOM_Id: ".logged-in",
     pop_up_text: "Instructions:  Click NEXT to move to the next step, BACK to go back, and ESC to exit",
     sequence: 1,
@@ -128,7 +134,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "GITIGNORE",
+  title: ".gitignore",
   DOM_Id: "#repository_gitignore_template_toggle",
   pop_up_text: "We also suggest adding a .gitignore file",
   sequence: 8,
@@ -146,14 +152,89 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "CREATE",
+  title: "Create",
   DOM_Id: ".btn-primary",
   pop_up_text: "Click here to create the new respository",
   sequence: 10,
   url: "^https://github.com/new$"
 )
 
+LessonStep.create!(
+  lesson_id: 1,
+  title: "DONE. CONGRATULATIONS! ",
+  DOM_Id: "#btn-primary",
+  pop_up_text: "This ends the lesson. When you click DONE, you will be re-directed back to your lessons page on univerlay-me.com",
+  sequence: 11,
+  url: "^https://github.com/new$"
+)
+
 puts "Lesson steps for Create Github Repo created!"
+
+LessonStep.create!(
+    lesson_id: 2,
+    title: "Welcome to Univerlay's Guide to Importing a Repository into Github",
+    DOM_Id: ".logged-in",
+    pop_up_text: "Instructions:  Click NEXT to move to the next step, BACK to go back, and ESC to exit",
+    sequence: 1,
+    url: "^https://github.com/$"
+)
+
+LessonStep.create!(
+  lesson_id: 2,
+  title: "Start",
+  DOM_Id: ".octicon.octicon-plus",
+  pop_up_text: "Select 'Import repository' and move on to next page",
+  sequence: 2,
+  url: "^https://github.com/$"
+)
+
+LessonStep.create!(
+  lesson_id: 2,
+  title: "Import",
+  DOM_Id: "#vcs_url",
+  pop_up_text: "Enter the url of an existing report that you would like to import",
+  sequence: 3,
+  url: "^https://github.com/new/import$"
+)
+
+LessonStep.create!(
+  lesson_id: 2,
+  title: "Name",
+  DOM_Id: "#repository_name",
+  pop_up_text: "Enter short memorable name for the repository",
+  sequence: 4,
+  url: "^https://github.com/new/import$"
+)
+
+LessonStep.create!(
+  lesson_id: 2,
+  title: "Public or Private",
+  DOM_Id: "#repository_visibility_public",
+  pop_up_text: "Select if your repository should be public or private",
+  sequence: 5,
+  url: "^https://github.com/new/import$"
+)
+
+
+LessonStep.create!(
+  lesson_id: 2,
+  title: "Begin Import",
+  DOM_Id: ".btn-primary.btn",
+  pop_up_text: "Click to begin importing the repository into Github",
+  sequence: 6,
+  url: "^https://github.com/new/import$"
+)
+
+LessonStep.create!(
+  lesson_id: 2,
+  title: "DONE. CONGRATULATIONS! ",
+  DOM_Id: "#btn-primary",
+  pop_up_text: "This ends the lesson. When you click DONE, you will be re-directed back to your lessons page on univerlay-me.com",
+  sequence: 7,
+  url: "^https://github.com/new/import$"
+)
+
+puts "Lesson steps for Import into Github created!"
 
 LessonStep.create!(
   lesson_id: 3,
