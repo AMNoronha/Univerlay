@@ -71,9 +71,9 @@ puts "Lesson progresses created!"
 
 LessonStep.create!(
     lesson_id: 1,
-    title: "Welcome to Univerlay's Guide to Creating a New Repository",
+    title: "Welcome to Univerlay's Guide to Creating a New Github Repository 🗳 ",
     DOM_Id: ".logged-in",
-    pop_up_text: "Instructions:  Click NEXT to move to the next step, BACK to go back, and ESC to exit",
+    pop_up_text: "Instructions:  Click ▷ NEXT to move to the next step, ◁ BACK to go back, and ESC to exit",
     sequence: 1,
     url: "^https://github.com/$"
 )
@@ -161,9 +161,9 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 1,
-  title: "DONE. CONGRATULATIONS! ",
+  title: "CONGRATULATIONS! 🎉👏🏻 🎉👏🏻 🎉👏🏻 ",
   DOM_Id: "#btn-primary",
-  pop_up_text: "This ends the lesson. When you click DONE, you will be re-directed back to your lessons page on univerlay-me.com",
+  pop_up_text: "This ends the lesson. When you click ⏹ DONE, you will be re-directed back to your lessons page on univerlay-me.com",
   sequence: 11,
   url: "^https://github.com/new$"
 )
@@ -172,9 +172,9 @@ puts "Lesson steps for Create Github Repo created!"
 
 LessonStep.create!(
     lesson_id: 2,
-    title: "Welcome to Univerlay's Guide to Importing a Repository into Github",
+    title: "Welcome to Univerlay's Guide to Importing a Repository into Github 📥 ",
     DOM_Id: ".logged-in",
-    pop_up_text: "Instructions:  Click NEXT to move to the next step, BACK to go back, and ESC to exit",
+    pop_up_text: "Instructions:  Click ▷ NEXT to move to the next step, ◁ BACK to go back, and ESC to exit",
     sequence: 1,
     url: "^https://github.com/$"
 )
@@ -227,7 +227,7 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 2,
-  title: "DONE. CONGRATULATIONS! ",
+  title: "CONGRATULATIONS! 🎉👏🏻 🎉👏🏻 🎉👏🏻",
   DOM_Id: "#btn-primary",
   pop_up_text: "This ends the lesson. When you click DONE, you will be re-directed back to your lessons page on univerlay-me.com",
   sequence: 7,
