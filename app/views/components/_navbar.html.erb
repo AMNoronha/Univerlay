@@ -21,6 +21,9 @@
           <% end %>
         <% end %>
       </li>
+      <li class="navbar-item mr-3">
+        <%= link_to 'Product Guide', 'pages/guide', class: "nav-link text-light" %>
+      </li>
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link text-light" %>

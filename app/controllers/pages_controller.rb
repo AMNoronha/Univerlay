@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :show ]
 
   def home
     @user_lesson_progresses = policy_scope(LessonProgress)
@@ -15,7 +15,9 @@ class PagesController < ApplicationController
       format.html
       format.text { render partial: 'pages/lessons_list.html', locals: { lessons: @lessons } }
     end
+  end
 
-    # raise
+  def show
+    render template: "pages/#{params[:page]}"
   end
 end
