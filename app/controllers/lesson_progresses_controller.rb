@@ -1,6 +1,6 @@
 class LessonProgressesController < ApplicationController
   before_action :set_lesson_progress, only: %i[show edit update]
-  skip_before_action :authenticate_user!, only: [:index]
+  # skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @lesson_progresses = policy_scope(LessonProgress)
