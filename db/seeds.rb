@@ -29,17 +29,17 @@ repo = Lesson.create!(
 
 repo.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-repo.jpeg')), filename: 'github-repo.jpeg')
 
-branch = Lesson.create!(
+import_repo = Lesson.create!(
   title: "Import an existing repository into Github"
 )
 
-branch.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-branch.jpeg')), filename: 'github-branch.jpeg')
+import_repo.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-branch.jpeg')), filename: 'github-branch.jpeg')
 
-pull = Lesson.create!(
-  title: "Open a pull request on Github"
+fork_repo = Lesson.create!(
+  title: "Fork a Github repository"
 )
 
-pull.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-pull.jpeg')), filename: 'github-pull.jpeg')
+fork_repo.photo.attach(io: File.open(Rails.root.join('app/assets/images/github-pull.jpeg')), filename: 'github-pull.jpeg')
 
 puts "Lessons created!"
 
@@ -316,4 +316,4 @@ LessonStep.create!(
   sequence: 9,
   url: "^https://github.com/.+/Spoon-Knife$"
 )
-puts "Lesson steps for Create Pull Request created!"
+puts "Lesson steps for Fork Github repo created!"
