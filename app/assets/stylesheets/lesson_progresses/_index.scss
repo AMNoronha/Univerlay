@@ -235,6 +235,20 @@
       &::before {
         // border-left: 2px solid green;
       }
+      &::after {
+        content: "•";
+        font-size: 12px;
+        color: green;
+        text-align: center;
+        border: 6px solid green;
+        background-color: white;
+      }
+    }
+
+    &.is-not {
+      &::before {
+        // border-left: 2px solid green;
+      }
 
       &::after {
         content: "";
