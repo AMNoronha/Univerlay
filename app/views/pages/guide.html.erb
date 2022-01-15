@@ -1,3 +1,5 @@
+<%= content_for(:navbar_class, "navbar-home fixed-top") %>
+
 <div class="banner-guide">
   <div class="container">
     <h1>Step-by-Step Guide</h1>
@@ -16,29 +18,33 @@
 
     <h5><b>Step 1:</b></h5>
     <p>Sign up for an account <%= link_to "here", new_user_registration_path %>.</p>
-    <%= image_tag ("sign-up.gif"), height: 250 %>
+    <%= image_tag ("sign-up.gif"), height: 250, class: "mb-4" %>
 
     <h5><b>Step 2:</b></h5>
     <p>Download Univerlay Chrome Extension from the <a href="" target="_blank">Chrome Web Store</a>.</p>
 
     <h5><b>Step 3:</b></h5>
     <p>Choose a lesson to start from our list of <a href="https://www.univerlay.me/#lessons-section" target="_blank">lessons</a>.</p>
+    <%= image_tag ("start-lesson.gif"), height: 250, class: "mb-4" %>
+    <br>
 
     <h5><b>Step 4:</b></h5>
     <p style="margin-bottom:0;">Click on the 'Click to lesson' button and it will direct you to the website (e.g. Github).</p>
     <p><em>*For Github lessons, remember to sign in or create an account with Github.</em></p>
+    <%= image_tag ("click-to-lesson.gif"), height: 250, class: "mb-4" %>
+    <br>
 
     <h5><b>Step 5:</b></h5>
-    <p>Once signed in to the current website (e.g. Github), start the Univerlay Chrome Extension.</p>
-
-    <h5><b>Step 6:</b></h5>
-    <p>Enter your Univerlay account email and password, and click 'Submit'.</p>
+    <p>Once signed in to the current website (e.g. Github), start the Univerlay Chrome Extension and enter your Univerlay account email and password. Then, click 'Submit' button below the 'password' field.</p>
 
     <h5><b>Step 7:</b></h5>
-    <p>Choose your lesson from the dropdown menu, and click 'Submit'.</p>
+    <p>Choose your lesson from the dropdown menu, and click the 'Submit' button below the dropdown menu.</p>
 
     <h5><b>Step 8:</b></h5>
     <p>Voila! You should have a popup appearing on the page, and you can proceed to start your learning with Univerlay :)</p>
+
+    <h5><b>Step 9:</b></h5>
+    <p>Click on 'Clear' button on Univerlay Chrome Extension popup to sign out of your session.</p>
   </div>
   <br>
 </div>
