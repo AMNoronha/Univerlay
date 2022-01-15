@@ -10,14 +10,16 @@
         <div class="col-sm-4 d-flex">
           <div class="card flex-fill py-0 px-0 shadow mb-5" data-aos="zoom-in-up" data-aos-duration="1500">
             <% if lesson.photo.attached? %>
-              <%= cl_image_tag lesson.photo.key, height: 250, crop: :fill, class: "card-img-top", alt: "user uploaded image" %>
+              <%= cl_image_tag lesson.photo.key, height: 250, crop: :fill, class: "card-img-top", alt: "lesson image" %>
             <% else %>
               <%= image_tag "https://images.unsplash.com/photo-1464380573004-8ca85a08751a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" %>
             <% end %>
             <div class="card-body">
               <h5 class="card-title"><%= lesson.title %></h5>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
               <% if current_user.nil? %>
-                <%= link_to 'Start lesson', new_user_session_path, class: "btn btn-primary" %>
+                <%= link_to 'Start lesson', new_user_session_path, class: "btn btn-primary btn-block" %>
               <% else %>
                 <% if @user_lesson_progresses.find_by(lesson_id: lesson.id).nil? %>
                   <%= simple_form_for @lesson_progress, url: lesson_lesson_progresses_path(lesson.id) do |f| %>
@@ -25,10 +27,10 @@
                       <%= f.input :current_step, input_html: { value: 1 } %>
                       <%= f.input :lesson_id, input_html: { value: lesson.id } %>
                     </div>
-                    <%= f.submit 'Start lesson', class: "btn btn-primary" %>
+                    <%= f.submit 'Start lesson', class: "btn btn-primary btn-block" %>
                   <% end %>
                 <% else %>
-                  <%= link_to 'Continue lesson', lesson_lesson_progresses_path(lesson), class: "btn btn-primary" %>
+                  <%= link_to 'Continue lesson', lesson_lesson_progresses_path(lesson), class: "btn btn-primary btn-block" %>
                 <% end %>
               <% end %>
             </div>
