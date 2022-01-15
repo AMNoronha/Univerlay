@@ -17,8 +17,6 @@ class Users::SessionsController < Devise::SessionsController
   def respond_with_authentication_token(resource)
     resource.authentication_token = nil
     resource.save
-    puts "authentication token"
-    p resource.authentication_token
     render json: {
       success: true,
       auth_token: resource.authentication_token,
