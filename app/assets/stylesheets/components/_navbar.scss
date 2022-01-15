@@ -15,6 +15,15 @@
   color:$white
 }
 
+.navbar-guide {
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  background:transparent;
+  font-family: Manrope;
+  color:$white
+}
+
 .navbar-home-blue {
   justify-content: space-between;
   background:$dark-blue;
