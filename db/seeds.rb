@@ -238,59 +238,82 @@ puts "Lesson steps for Import into Github created!"
 
 LessonStep.create!(
   lesson_id: 3,
-  title: "Step 1",
-  DOM_Id: "#pull-requests-tab",
-  pop_up_text: "At your local repository (on your terminal), make sure you have run git add, git commit & git push origin branch-name",
+  title: "Welcome to Univerlay's Guide to Forking a Repository 🗄 ",
+  DOM_Id: ".logged-in",
+  pop_up_text:  "Instructions:  Click ▷ NEXT to move to the next step, ◁ BACK to go back, and ESC to exit",
   sequence: 1,
-  url: "^https://github.com/\\w+/\\w+-?\\w*-?\\w*-?\\w*$"
+  url: "^https://github.com/?"
 )
+
 LessonStep.create!(
   lesson_id: 3,
-  title: "Step 2",
-  DOM_Id: ".flex-shrink-0.btn.btn-primary.ml-sm-3.mt-2.mt-sm-n2.mb-sm-n2.mr-sm-n1.flex-self-center",
-  pop_up_text: "Click the compare & pull request button",
+  title: "Forking",
+  DOM_Id: ".logged-in",
+  pop_up_text:  "To demonstrate, we will fork another Github repo https://github.com/octocat/Spoon-Knife",
   sequence: 2,
-  url: "^https://github.com/.+/.+/pulls$"
+  url: "^https://github.com/?"
 )
-# LessonStep.create!(
-#   lesson_id: 3,
-#   title: "Step 3",
-#   DOM_Id: "#pull_request_title",
-#   pop_up_text: "Enter short memorable title for this pull request",
-#   sequence: 3,
-#   url: "^https://github.com/.+/.+/pulls$"
-# )
-# LessonStep.create!(
-#   lesson_id: 3,
-#   title: "Step 4",
-#   DOM_Id: "#pull_request_body",
-#   pop_up_text: "Write comments on what changes you have made to the code",
-#   sequence: 4,
-#   url: "^https://github.com/.+/.+/pulls$"
-# )
-# LessonStep.create!(
-#   lesson_id: 3,
-#   title: "Step 5",
-#   DOM_Id: ".BtnGroup",
-#   pop_up_text: "Click the Create Pull Request button",
-#   sequence: 5,
-#   url: "^https://github.com/.+/.+/pulls$"
-# )
-# LessonStep.create!(
-#   lesson_id: 3,
-#   title: "Step 6",
-#   DOM_Id: ".btn-group-merge",
-#   pop_up_text: "Click the merge button if there are no conflicts with the base branch",
-#   sequence: 6,
-#   url: "^https://github.com/.+/.+/pulls$"
-# )
-# LessonStep.create!(
-#   lesson_id: 3,
-#   title: "Step 7",
-#   DOM_Id: "#.btn-primary",
-#   pop_up_text: "Click the confirm merge button",
-#   sequence: 7,
-#   url: "^https://github.com/.+/.+/pulls$"
-# )
 
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Forking a Repo",
+  DOM_Id: ".btn-sm.btn",
+  pop_up_text: "Click Fork and decide where to save your fork (usually your own repo)",
+  sequence: 3,
+  url: "^https://github.com/.+/Spoon-Knife$"
+)
+
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Navigate to Your Version (Forked)",
+  DOM_Id: ".logged-in",
+  pop_up_text: "You now have a copy of the repo; we will now proceed to download this version so you may modify it",
+  sequence: 4,
+  url: "^https://github.com/.+/Spoon-Knife$"
+)
+
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Clone",
+  DOM_Id: ".btn-primary.btn",
+  pop_up_text: "Click on code to learn how to clone this forked repo",
+  sequence: 5,
+  url: "^https://github.com/.+/Spoon-Knife$"
+)
+
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Methods",
+  DOM_Id: ".logged-in",
+  pop_up_text: "Clone with HTTPS, SSH, or Github CLI. We will use SSH.",
+  sequence: 6,
+  url: "^https://github.com/.+/Spoon-Knife$"
+)
+
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Open Terminal",
+  DOM_Id: ".logged-in",
+  pop_up_text: "Open Terminal. Change the current directory to the location where you want your cloned repo.",
+  sequence: 7,
+  url: "^https://github.com/.+/Spoon-Knife$"
+)
+
+LessonStep.create!(
+  lesson_id: 3,
+  title: "Git Clone",
+  DOM_Id: ".logged-in",
+  pop_up_text: "Enter git clone https://github.com/YOUR-USERNAME/Spoon-Knife",
+  sequence: 8,
+  url: "^https://github.com/.+/Spoon-Knife$"
+)
+
+LessonStep.create!(
+  lesson_id: 3,
+  title: "CONGRATULATIONS! 🎉👏🏻 🎉👏🏻 🎉👏🏻",
+  DOM_Id: ".logged-in",
+  pop_up_text: "This ends the lesson. When you click DONE, you will be re-directed back to your lessons page on univerlay-me.com",
+  sequence: 9,
+  url: "^https://github.com/.+/Spoon-Knife$"
+)
 puts "Lesson steps for Create Pull Request created!"
