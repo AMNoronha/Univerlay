@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  acts_as_token_authentication_handler_for User, fallback: :none
   protect_from_forgery with: :null_session, if: :json_request?
+  acts_as_token_authentication_handler_for User, fallback: :none
 
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
