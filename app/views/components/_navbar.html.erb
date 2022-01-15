@@ -21,12 +21,12 @@
           <% end %>
         <% end %>
       </li>
-      <li class="navbar-item">
-        <%= link_to "Step-by-Step Guide", guide_path, class: "nav-link text-light" %>
-      </li>
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link text-light" %>
+        </li>
+        <li class="navbar-item">
+          <%= link_to "Step-by-Step Guide", guide_path, class: "nav-link text-light" %>
         </li>
         <li class="nav-item">
           <%= link_to "My Lessons", lessons_path, class: "nav-link text-light" %>
@@ -44,6 +44,9 @@
           </div>
         </li>
       <% else %>
+        <li class="navbar-item">
+          <%= link_to "Step-by-Step Guide", guide_path, class: "nav-link text-light" %>
+        </li>
         <li class="nav-item ml-5">
           <%= link_to "Login", new_user_session_path, class: "btn btn-outline-light" %>
         </li>
