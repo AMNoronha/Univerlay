@@ -17,7 +17,6 @@ class PagesController < ApplicationController
     end
   end
 
-  def show
-    render template: "pages/#{params[:page]}"
+  def guide
   end
 end
