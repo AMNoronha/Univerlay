@@ -240,7 +240,7 @@ LessonStep.create!(
   lesson_id: 3,
   title: "Welcome to Univerlay's Guide to Forking a Repository 🗄 ",
   DOM_Id: ".logged-in",
-  pop_up_text:  "Instructions:  Click ▷ NEXT to move to the next step, ◁ BACK to go back, and ESC to exit",
+  pop_up_text: "Instructions: Click ▷ NEXT to move to the next step, ◁ BACK to go back, and ESC to exit",
   sequence: 1,
   url: "^https://github.com/?"
 )
@@ -249,7 +249,7 @@ LessonStep.create!(
   lesson_id: 3,
   title: "Forking",
   DOM_Id: ".logged-in",
-  pop_up_text:  "To demonstrate, we will fork another Github repo https://github.com/octocat/Spoon-Knife",
+  pop_up_text: "To demonstrate, we will fork another Github repo https://github.com/octocat/Spoon-Knife",
   sequence: 2,
   url: "^https://github.com/?"
 )
@@ -257,10 +257,10 @@ LessonStep.create!(
 LessonStep.create!(
   lesson_id: 3,
   title: "Forking a Repo",
-  DOM_Id: ".btn-sm.btn",
+  DOM_Id: ".Box.d-flex",
   pop_up_text: "Click Fork and decide where to save your fork (usually your own repo)",
   sequence: 3,
-  url: "^https://github.com/.+/Spoon-Knife$"
+  url: "^https://github.com/octocat/Spoon-Knife$"
 )
 
 LessonStep.create!(
@@ -274,8 +274,8 @@ LessonStep.create!(
 
 LessonStep.create!(
   lesson_id: 3,
-  title: "Clone",
-  DOM_Id: ".btn-primary.btn",
+  title: "Clone Code",
+  DOM_Id: ".btn-primary.btn-sm.btn",
   pop_up_text: "Click on code to learn how to clone this forked repo",
   sequence: 5,
   url: "^https://github.com/.+/Spoon-Knife$"
