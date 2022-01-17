@@ -16,17 +16,17 @@
             params[:query],
             class: "form-control",
             placeholder: "Find a lesson" %>
-          <%= button_tag type: 'submit', class: "btn btn-primary mr-3" do %>
+          <%= button_tag type: 'submit', class: "btn btn-primary mr-2" do %>
             <i class="fas fa-search"></i>
           <% end %>
         <% end %>
       </li>
-      <li class="navbar-item mr-3">
-        <%= link_to "Product Guide", guide_path, class: "nav-link text-light" %>
-      </li>
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link text-light" %>
+        </li>
+        <li class="navbar-item">
+          <%= link_to "User Guide", guide_path, class: "nav-link text-light" %>
         </li>
         <li class="nav-item">
           <%= link_to "My Lessons", lessons_path, class: "nav-link text-light" %>
@@ -44,7 +44,10 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item">
+        <li class="navbar-item">
+          <%= link_to "User Guide", guide_path, class: "nav-link text-light" %>
+        </li>
+        <li class="nav-item ml-5">
           <%= link_to "Login", new_user_session_path, class: "btn btn-outline-light" %>
         </li>
         <li class="nav-item">
