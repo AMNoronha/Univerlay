@@ -11,42 +11,61 @@
 <div class="container">
   <br>
   <div id="steps-guide" class="p-5">
-    <h3><b>Overview</b></h3>
+    <h2><b>Overview</b></h2>
     <p>Univerlay is a Digital Adoption Platform (DAP) that provides training information and step-by-step guides within the web browser, to make the digital adoption journey painless.</p>
     <p>This step-by-step guide will bring you through the whole onboarding process to Univerlay.</p>
-    <h3><b>Starting a lesson with Univerlay</b></h3>
-    <p style="margin-bottom:0;"><em>*Skip to Step 3 if you've already signed up for an Univerlay account and has downloaded the Univerlay Chrome Extension.</em></p>
-    <p><em>*Skip to Step 2 if you've already signed up for an Univerlay account but yet to download the Univerlay Chrome Extension.</em></p>
+    <ul>
+      <li><a href="#install-guide">Univerlay Chrome Extension installation guide</a></li>
+      <li><a href="#lesson-guide">Starting a lesson with Univerlay</a></li>
+    </ul>
 
-    <h5><b>Step 1:</b></h5>
-    <p>Sign up for an account <%= link_to "here", new_user_registration_path, target: :_blank %>.</p>
-    <%= image_tag ("sign-up.gif"), height: 300, class: "mb-4" %>
+    <div id="install-guide">
+      <h3><b>Installing Univerlay Chrome Extension</b></h3>
+      <h5><b>Step 1:</b></h5>
+      <p>Download the Univerlay Chrome Extension ZIP file <a href="" target="_blank">here</a> and unzip the archive to your desktop.</p>
 
-    <h5><b>Step 2:</b></h5>
-    <p>Download Univerlay Chrome Extension from the <a href="" target="_blank">Chrome Web Store</a>.</p>
+      <h5><b>Step 2:</b></h5>
+      <p>Enter <code>chrome://extensions</code> in the Chrome search bar, and activate developer mode (top-right corner). Then, click 'Load unpacked' and select the univerlay-chrome-extension folder.</p>
+      <p>You've successfully installed the Chrome Extension! 🎉</p>
+      <%= image_tag ("install-ext.gif"), height: 300, class: "mb-4" %>
 
-    <h5><b>Step 3:</b></h5>
-    <p>Choose a lesson to start from our list of <a href="https://www.univerlay.me/#lessons-section" target="_blank">lessons</a>.</p>
-    <%= image_tag ("start-lesson.gif"), height: 300, class: "mb-4" %>
-    <br>
+    </div>
 
-    <h5><b>Step 4:</b></h5>
-    <p style="margin-bottom:0;">Click on the 'Click to lesson' button and it will direct you to the website (e.g. Github).</p>
-    <p><em>*For Github lessons, remember to sign in or create an account with Github.</em></p>
-    <%= image_tag ("click-to-lesson.gif"), height: 300, class: "mb-4" %>
-    <br>
+    <div id="lesson-guide" class="mt-4">
+      <h3><b>Starting a lesson with Univerlay</b></h3>
+      <p style="margin-bottom:0;"><em>*Skip to Step 2 if you've already signed up for an Univerlay account and has downloaded the Univerlay Chrome Extension.</em></p>
+      <p><em>*Refer to our <a href="#install-guide">installation guide</a> if you've yet to download the Univerlay Chrome Extension.</em></p>
 
-    <h5><b>Step 5:</b></h5>
-    <p>Once signed in to the current website (e.g. Github), start the Univerlay Chrome Extension and enter your Univerlay account email and password. Then, click 'Submit' button below the 'password' field.</p>
-    <%= image_tag ("start-extension.gif"), height: 300, class: "mb-4" %>
+      <h5><b>Step 1:</b></h5>
+      <p>Sign up for an account <%= link_to "here", new_user_registration_path, target: :_blank %>.</p>
+      <%= image_tag ("sign-up.gif"), height: 300, class: "mb-4" %>
 
-    <h5><b>Step 6:</b></h5>
-    <p>Choose your lesson from the dropdown menu, and click the 'Submit' button below the dropdown menu. Voila! You should have a popup appearing on the page, and you can proceed to start your learning with Univerlay :)</p>
-    <%= image_tag ("choose-lesson.gif"), height: 300, class: "mb-4" %>
+      <%# <h5><b>Step 2:</b></h5>
+      <p>Download Univerlay Chrome Extension from the <a href="" target="_blank">Chrome Web Store</a>.</p> %>
 
-    <h5><b>Step 7:</b></h5>
-    <p>Click on 'Clear' button on Univerlay Chrome Extension popup to sign out of your session.</p>
-    <%= image_tag ("clear-session.gif"), height: 300, class: "mb-4" %>
+      <h5><b>Step 2:</b></h5>
+      <p>Choose a lesson to start from our list of <a href="https://www.univerlay.me/#lessons-section" target="_blank">lessons</a>.</p>
+      <%= image_tag ("start-lesson.gif"), height: 300, class: "mb-4" %>
+      <br>
+
+      <h5><b>Step 3:</b></h5>
+      <p style="margin-bottom:0;">Click on the 'Click to lesson' button and it will direct you to the website (e.g. Github).</p>
+      <p><em>*For Github lessons, remember to sign in or create an account with Github.</em></p>
+      <%= image_tag ("click-to-lesson.gif"), height: 300, class: "mb-4" %>
+      <br>
+
+      <h5><b>Step 4:</b></h5>
+      <p>Once signed in to the current website (e.g. Github), start the Univerlay Chrome Extension and enter your Univerlay account email and password. Then, click 'Submit' button below the 'password' field.</p>
+      <%= image_tag ("start-extension.gif"), height: 300, class: "mb-4" %>
+
+      <h5><b>Step 5:</b></h5>
+      <p>Choose your lesson from the dropdown menu, and click the 'Submit' button below the dropdown menu. Voila! You should have a popup appearing on the page, and you can proceed to start your learning with Univerlay 🥳👩🏻‍💻👨🏻‍💻</p>
+      <%= image_tag ("choose-lesson.gif"), height: 300, class: "mb-4" %>
+
+      <h5><b>Step 6:</b></h5>
+      <p>Click on 'Clear' button on Univerlay Chrome Extension popup to sign out of your session.</p>
+      <%= image_tag ("clear-session.gif"), height: 300, class: "mb-4" %>
+    </div>
   </div>
   <br>
 </div>
